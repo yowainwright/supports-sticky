@@ -1,2 +1,3 @@
-# supports-sticky
-Easy CSS position sticky support detection
+# supports sticky
+
+Easy CSS position sticky support detection with useful helper functions.
