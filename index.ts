@@ -1,16 +1,26 @@
+/**
+ * prefixes
+ * ----
+ * an array of strings used to test
+ * if position sticky is implemented
+ * in a browser with a prefix
+ */
 
-export const prefixes: [] = ['', '-o-', '-webkit-', '-moz-', '-ms-']
+export const browserPrefixes: string[] = ['', '-o-', '-webkit-', '-moz-', '-ms-']
 
 /**
+  * supportsSticky
+  * ----
+  * returns a boolean (true|false)
+  * of whether position sticky is defined
   * @param {obj} an object with prefixes
+  * @returns {boolean}
  */
-export default const supportsSticky: boolean = function supportsSticky (
-  { prefixes } = {}
-) { 
-  const test = document.head.style
-  prefixes.forEach(prefix => {
-    if (test.position) return 
-    test.position = `${prefix}sticky`
-  })
-  return test.position ? true : false
-}
+export const supportsSticky =
+  function supportsSticky({ prefixes = browserPrefixes, testEl = document.head.style } = {}): boolean {
+    const test = testEl
+    prefixes.forEach(prefix => test.position
+      ? test.position
+      : test.position = `${prefix}sticky`)
+    return test.position ? true : false
+  }
