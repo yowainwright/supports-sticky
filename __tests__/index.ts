@@ -1,5 +1,4 @@
 import {
-
   supportsSticky
 } from '../index'
 
