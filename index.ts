@@ -22,8 +22,9 @@ export const supportsSticky =
     prefixes.forEach((prefix: string) => test.position
       ? test.position
       : test.position = `${prefix}sticky`)
+    const stickyPosition = test.position || 'fixed'
     return {
-      stickyPosition: test.position || null,
-      stickySupport: test.position ? true : false,
+      stickyPosition,
+      stickySupport: stickyPosition !== 'fixed' ? true : false,
     }
   }
