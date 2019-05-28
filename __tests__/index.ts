@@ -5,13 +5,16 @@ import {
 const scenarios = [
   {
     input: {},
-    output: true,
+    output: {
+      stickyPosition: 'sticky',
+      stickySupport: true,
+    },
   },
 ]
 
 scenarios.forEach(function testScenario(scenario) {
   test(`test supportsSticky`, () => {
     const result = supportsSticky(scenario.input)
-    expect(result).toBe(scenario.output)
+    expect(result).toEqual(scenario.output)
   })
 })

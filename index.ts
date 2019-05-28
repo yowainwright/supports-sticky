@@ -17,10 +17,13 @@ export const browserPrefixes: string[] = ['', '-o-', '-webkit-', '-moz-', '-ms-'
   * @returns {boolean}
  */
 export const supportsSticky =
-  function supportsSticky({ prefixes = browserPrefixes, testEl = document.head.style } = {}): boolean {
+  function supportsSticky({ prefixes = browserPrefixes, testEl = document.head.style } = {}): object {
     const test = testEl
-    prefixes.forEach(prefix => test.position
+    prefixes.forEach((prefix: string) => test.position
       ? test.position
       : test.position = `${prefix}sticky`)
-    return test.position ? true : false
+    return {
+      stickyPosition: test.position || null,
+      stickySupport: test.position ? true : false,
+    }
   }

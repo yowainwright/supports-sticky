@@ -7,6 +7,9 @@ exports.supportsSticky = function supportsSticky(_a) {
     prefixes.forEach(function (prefix) { return test.position
         ? test.position
         : test.position = prefix + "sticky"; });
-    return test.position ? true : false;
+    return {
+        stickyPosition: test.position || null,
+        stickySupport: test.position ? true : false,
+    };
 };
 //# sourceMappingURL=index.js.map
