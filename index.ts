@@ -1,13 +1,13 @@
-import { debounce } from 'lodash'
+import debounce from "lodash.debounce"
 
 /**
- * prefixes
+ * @name browserPrefixes
  * an array of strings used to test if position sticky is implemented
  */
 export const browserPrefixes: string[] = ['', '-o-', '-webkit-', '-moz-', '-ms-']
 
 /**
- * supportsSticky
+ * @name supportsSticky
  * @param {obj} an object with prefixes
  * @returns {boolean}
  * returns a boolean (true|false) of whether position sticky is defined
@@ -25,7 +25,7 @@ export const supportsSticky = ({ prefixes = browserPrefixes, testEl = document.h
 }
 
 /**
- * setSelector
+ * @name setSelector
  * @param element
  */
 export const setSelector = (element: HTMLElement | string): HTMLElement | null => {
@@ -35,7 +35,7 @@ export const setSelector = (element: HTMLElement | string): HTMLElement | null =
 }
 
 /**
- * distanceToElement
+ * @name distanceToElement
  * @param element
  * calculates the distance from the top of a webpage to an element
  */
@@ -45,7 +45,7 @@ export const distanceToElement = (element: HTMLElement | string) => {
 }
 
 /**
- * monitorDistanceToElement
+ * @name monitorDistanceToElement
  * @param element
  * @param time
  * re-calculates the distance from the top of a webpage to an element when a window is resized

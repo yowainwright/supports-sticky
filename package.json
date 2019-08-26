@@ -52,6 +52,8 @@
     ]
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "@types/lodash.debounce": "^4.0.6",
+    "lodash": "^4.17.11",
+    "lodash.debounce": "^4.0.8"
   }
 }
