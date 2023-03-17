@@ -17,7 +17,7 @@
     "markdownlint-cli": "^0.33.0",
     "ts-jest": "^24.0.0",
     "tslint": "^6.1.2",
-    "typescript": "^4.0.2",
+    "typescript": "^5.0.2",
     "write-good": "^1.0.1"
   },
   "scripts": {
