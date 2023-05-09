@@ -9,7 +9,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/lodash": "^4.14.134",
-    "@types/node": "^18.0.3",
+    "@types/node": "^20.1.1",
     "codecov": "^3.2.0",
     "husky": "^8.0.1",
     "jest": "^24.1.0",
